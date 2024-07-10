@@ -1,0 +1,8 @@
+import:
+  dev.lone.itemsadder.api.ItemsAdder
+
+command /test [<text>]:
+  trigger:
+    #네임스페이스:이름 형식임
+    set {testItem} to ItemsAdder.getCustomItem("itemsadder:ruby")
+    sender.getInventory().addItem({testItem})
